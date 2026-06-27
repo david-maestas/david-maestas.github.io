@@ -683,6 +683,10 @@ button:focus-visible,
     grid-template-columns: 1fr;
   }
 
+  .publication-card {
+    min-height: 0;
+  }
+
   .section-heading.split {
     align-items: start;
     flex-direction: column;
