@@ -4,7 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV | David R. Maestas, Jr., PhD</title>
-  <meta name="description" content="Web CV for David R. Maestas, Jr., PhD.">
+  <meta name="description" content="Curriculum vitae of David R. Maestas, Jr., PhD, Postdoctoral Associate in Bioengineering at the University of Pittsburgh.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://david-maestas.github.io/cv.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CV | David R. Maestas, Jr., PhD">
+  <meta property="og:description" content="Web CV and downloadable curriculum vitae for David R. Maestas, Jr., PhD.">
+  <meta property="og:url" content="https://david-maestas.github.io/cv.html">
+  <meta property="og:image" content="https://david-maestas.github.io/assets/david-maestas-headshot.jpg">
+  <script src="analytics.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,12 +29,12 @@
         <span></span>
       </button>
       <div class="nav-menu" id="nav-menu">
-        <a href="index.html#about">About</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a class="active" href="cv.html" aria-current="page">CV</a>
-        <a href="contact.html">Contact</a>
-        <a class="nav-button" href="assets/CV_David_Maestas_July_2026.pdf">Download CV</a>
+        <a href="index.html#about" data-analytics-category="navigation" data-analytics-label="about" data-analytics-placement="header">About</a>
+        <a href="research.html" data-analytics-category="navigation" data-analytics-label="research" data-analytics-placement="header">Research</a>
+        <a href="publications.html" data-analytics-category="navigation" data-analytics-label="publications" data-analytics-placement="header">Publications</a>
+        <a class="active" href="cv.html" aria-current="page" data-analytics-category="navigation" data-analytics-label="cv_page" data-analytics-placement="header">CV</a>
+        <a href="contact.html" data-analytics-category="navigation" data-analytics-label="contact" data-analytics-placement="header">Contact</a>
+        <a class="nav-button" href="assets/CV_David_Maestas_July_2026.pdf" download="David_R_Maestas_CV_July_2026.pdf" data-analytics-category="cv" data-analytics-label="cv_pdf" data-analytics-placement="header">Download CV</a>
       </div>
     </nav>
   </header>
@@ -37,7 +45,7 @@
         <p class="eyebrow">Curriculum Vitae</p>
         <h1>David R. Maestas, Jr., PhD</h1>
         <p>Postdoctoral Associate, Department of Bioengineering, University of Pittsburgh. Web CV sections below include placeholders for verified updates.</p>
-        <a class="button primary" href="assets/CV_David_Maestas_July_2026.pdf">Download PDF CV</a>
+        <a class="button primary" href="assets/CV_David_Maestas_July_2026.pdf" download="David_R_Maestas_CV_July_2026.pdf" data-analytics-category="cv" data-analytics-label="cv_pdf" data-analytics-placement="page_intro">Download PDF CV</a>
       </div>
     </section>
 
@@ -116,8 +124,13 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 David R. Maestas, Jr. &middot; Hosted on GitHub Pages</p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 David R. Maestas, Jr.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="privacy.html" data-analytics-category="navigation" data-analytics-label="privacy" data-analytics-placement="footer">Privacy</a>
+        <a href="#privacy-choices" data-analytics-privacy-choices>Privacy choices</a>
+        <span>Hosted on GitHub Pages</span>
+      </nav>
     </div>
   </footer>
 

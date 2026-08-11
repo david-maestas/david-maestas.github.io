@@ -605,6 +605,108 @@ button:focus-visible,
   font-size: 0.95rem;
 }
 
+.footer-inner,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-inner {
+  justify-content: space-between;
+}
+
+.footer-links {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-links > * + *::before {
+  content: "\00b7";
+  margin-right: 0.7rem;
+  color: #94a3b8;
+}
+
+.footer-links a {
+  color: var(--muted-strong);
+}
+
+.privacy-content strong {
+  color: var(--text);
+}
+
+.analytics-consent {
+  width: min(calc(100% - 32px), 980px);
+  margin: 16px auto 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: 0 16px 42px rgba(15, 32, 51, 0.16);
+}
+
+.analytics-consent[hidden] {
+  display: none;
+}
+
+.analytics-consent__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.analytics-consent__copy h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.analytics-consent__copy p {
+  max-width: 640px;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.analytics-consent__actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.consent-button {
+  min-width: 120px;
+  color: var(--accent-dark);
+  background: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.86rem;
+}
+
+.consent-button:hover,
+.consent-button:focus {
+  color: #ffffff;
+  background: var(--accent);
+  text-decoration: none;
+}
+
+.analytics-notice {
+  position: fixed;
+  z-index: 60;
+  top: 84px;
+  right: 20px;
+  max-width: min(360px, calc(100% - 40px));
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  font-size: 0.9rem;
+}
+
 @media (max-width: 880px) {
   .nav-toggle {
     display: block;
@@ -703,6 +805,11 @@ button:focus-visible,
   .contact-card.wide {
     grid-column: auto;
   }
+
+  .analytics-consent__inner {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -733,5 +840,33 @@ button:focus-visible,
   .cv-section,
   .card {
     padding: 1.1rem;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+
+  .analytics-consent {
+    width: calc(100% - 20px);
+    margin-top: 10px;
+  }
+
+  .analytics-consent__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .consent-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://david-maestas.github.io/sitemap.xml
