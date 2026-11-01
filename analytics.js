@@ -11,6 +11,7 @@
   let analyticsStarted = false;
   let pageViewSent = false;
   let debugMode = false;
+  let consentReturnFocus = null;
   const memoryStorage = new Map();
 
   const storage = {
@@ -135,7 +136,11 @@
   function hideBanner() {
     const banner = document.getElementById(BANNER_ID);
     if (banner) {
+      const focusWasInside = banner.contains(document.activeElement);
       banner.hidden = true;
+      if (focusWasInside) {
+        (consentReturnFocus || document.querySelector("main"))?.focus();
+      }
     }
   }
 
@@ -169,7 +174,7 @@
     banner.id = BANNER_ID;
     banner.className = "analytics-consent";
     banner.setAttribute("aria-labelledby", "analytics-consent-title");
-    banner.setAttribute("role", "dialog");
+    banner.setAttribute("role", "region");
     banner.innerHTML = `
       <div class="analytics-consent__inner">
         <div class="analytics-consent__copy">
@@ -199,11 +204,11 @@
     return banner;
   }
 
-  function showBanner() {
+  function showBanner(moveFocus = false) {
     const banner = createBanner();
     banner.hidden = false;
     const firstAction = banner.querySelector("button, a");
-    if (firstAction && currentConsent()) {
+    if (firstAction && moveFocus) {
       firstAction.focus();
     }
   }
@@ -357,7 +362,8 @@
       const privacyChoices = event.target.closest("[data-analytics-privacy-choices]");
       if (privacyChoices) {
         event.preventDefault();
-        showBanner();
+        consentReturnFocus = privacyChoices;
+        showBanner(true);
         return;
       }
 

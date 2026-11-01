@@ -3,6 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://david-maestas.github.io/</loc>
+    <lastmod>2026-11-01</lastmod>
     <image:image>
       <image:loc>https://david-maestas.github.io/assets/david-maestas-headshot.jpg</image:loc>
       <image:title>David R. Maestas, Jr., PhD</image:title>
@@ -10,17 +11,22 @@
   </url>
   <url>
     <loc>https://david-maestas.github.io/research.html</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
     <loc>https://david-maestas.github.io/publications.html</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
     <loc>https://david-maestas.github.io/cv.html</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
     <loc>https://david-maestas.github.io/contact.html</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
     <loc>https://david-maestas.github.io/privacy.html</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
 </urlset>

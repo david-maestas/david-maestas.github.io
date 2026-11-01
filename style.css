@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -183,7 +184,7 @@ p {
 a:focus-visible,
 button:focus-visible,
 .button:focus-visible {
-  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline: 3px solid var(--accent-dark);
   outline-offset: 3px;
 }
 
@@ -502,6 +503,8 @@ button:focus-visible,
 
 .content-block {
   max-width: 880px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding-bottom: 0.2rem;
 }
 
@@ -538,6 +541,76 @@ button:focus-visible,
 .publication-entry h2 {
   font-size: 1.35rem;
   margin-top: 0.8rem;
+}
+
+.publication-entry h3 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 0.5rem 0 0.8rem;
+}
+
+.hero-appointment {
+  font-size: 0.94rem;
+  color: var(--muted-strong);
+  margin-bottom: 1.25rem;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.5rem;
+  left: 0.5rem;
+  transform: translateY(-180%);
+  padding: 0.65rem 1rem;
+  background: var(--text);
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  color: #ffffff;
+}
+
+main:focus {
+  outline: none;
+}
+
+.card-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.status-note,
+.page-updated,
+.award-detail {
+  font-size: 0.92rem;
+  color: var(--muted-strong);
+}
+
+.status-note {
+  margin: 1rem 0 0;
+}
+
+.news-highlight {
+  padding: 1.5rem;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+}
+
+.news-highlight h3 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.contact-card a,
+.publication-entry,
+.cv-section {
+  overflow-wrap: anywhere;
+}
+
+.cv-section p:last-child {
+  margin-bottom: 0;
 }
 
 .cv-layout {
@@ -708,7 +781,7 @@ button:focus-visible,
 }
 
 @media (max-width: 880px) {
-  .nav-toggle {
+  .js .nav-toggle {
     display: block;
   }
 
@@ -721,7 +794,24 @@ button:focus-visible,
   }
 
   .nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    padding-block: 0.65rem;
+  }
+
+  .js .nav {
+    flex-wrap: nowrap;
+    padding-block: 0;
+  }
+
+  .js .nav-menu {
     position: absolute;
+    width: auto;
     top: 68px;
     left: 20px;
     right: 20px;
@@ -736,7 +826,7 @@ button:focus-visible,
     box-shadow: var(--shadow);
   }
 
-  .nav-menu.is-open {
+  .js .nav-menu.is-open {
     display: flex;
   }
 
@@ -784,6 +874,7 @@ button:focus-visible,
   }
 
   .card-grid.three,
+  .card-grid.two,
   .publication-preview,
   .contact-grid {
     grid-template-columns: 1fr;

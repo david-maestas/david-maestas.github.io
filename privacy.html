@@ -13,9 +13,16 @@
   <meta property="og:url" content="https://david-maestas.github.io/privacy.html">
   <meta property="og:image" content="https://david-maestas.github.io/assets/david-maestas-headshot.jpg">
   <script src="analytics.js"></script>
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:site_name" content="David R. Maestas, Jr., PhD">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="David R. Maestas, Jr., PhD">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="index.html" aria-label="David R. Maestas, Jr. home">
@@ -39,19 +46,21 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="page-hero">
       <div class="container narrow">
         <p class="eyebrow">Privacy</p>
         <h1>Your analytics choice</h1>
         <p>This site uses optional analytics only after you choose to allow them. Analytics are used to understand how visitors find and use the academic content, not for advertising.</p>
-        <a class="button primary" href="#privacy-choices" data-analytics-privacy-choices>Review privacy choices</a>
+        <a class="button primary" href="privacy.html#analytics-choice" data-analytics-privacy-choices>Review privacy choices</a>
       </div>
     </section>
 
     <section class="section">
       <div class="container content-list privacy-content">
         <article class="content-block">
+          <noscript><p>JavaScript is disabled in your browser. Optional analytics do not load, and the site remains available.</p></noscript>
+          <noscript><p>JavaScript is disabled in your browser. Optional analytics do not load, and the site remains available.</p></noscript>
           <h2>Information analytics may collect</h2>
           <p>If you allow analytics, Google Analytics 4 may record the page viewed, referral source, device or browser category, scroll engagement, outbound-link interactions, publication-link interactions, CV PDF clicks or download attempts, and contact-method interactions.</p>
           <p>GA4 may also provide approximate country, region, or city information. This site does not intentionally collect precise GPS location.</p>
@@ -64,8 +73,8 @@
         </article>
 
         <article class="content-block">
-          <h2>Your choice</h2>
-          <p>You can decline analytics, and you can change your choice later by selecting <strong>Privacy choices</strong> in any page footer. Revoking consent prevents analytics from initializing on subsequent page loads and removes accessible first-party Google Analytics cookies where technically possible.</p>
+          <h2 id="analytics-choice">Your choice</h2>
+          <p>You can decline analytics, and you can change your choice later by selecting <strong>Privacy choices</strong> in any page footer. Revoking consent prevents analytics from initializing on subsequent page loads and removes accessible first-party Google Analytics cookies where technically possible. Your choice is saved in browser local storage so it can be remembered between pages. Your choice is saved in browser local storage so it can be remembered between pages.</p>
         </article>
 
         <article class="content-block">
@@ -81,7 +90,7 @@
       <p>&copy; 2026 David R. Maestas, Jr.</p>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="privacy.html" aria-current="page" data-analytics-category="navigation" data-analytics-label="privacy" data-analytics-placement="footer">Privacy</a>
-        <a href="#privacy-choices" data-analytics-privacy-choices>Privacy choices</a>
+        <a href="privacy.html#analytics-choice" data-analytics-privacy-choices>Privacy choices</a>
         <span>Hosted on GitHub Pages</span>
       </nav>
     </div>
