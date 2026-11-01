@@ -228,6 +228,9 @@ main:focus { outline: none; }
 .cv-section > p + .cv-item { margin-top: 12px; }
 .skill-list { padding-left: 18px; margin: 20px 0 0; color: var(--muted); font-size: 0.88rem; }
 .skill-list li { padding-block: 5px; }
+.technical-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 40px; margin-top: 24px; }
+.technical-group h3 { font-size: 0.95rem; line-height: 1.5; margin-bottom: 9px; }
+.technical-group .skill-list { margin-top: 0; }
 
 /* Contact and privacy */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 70px; max-width: 980px; }
@@ -411,6 +414,7 @@ main:focus { outline: none; }
   .cv-detail h3 { font-size: 0.95rem; }
   .cv-detail p { font-size: 0.83rem; }
   .skill-list { font-size: 0.83rem; }
+  .technical-grid { grid-template-columns: 1fr; gap: 24px; }
   .contact-grid { gap: 8px 25px; }
   .contact-card h2 { font-size: 0.64rem; }
   .contact-card p { font-size: 0.85rem; }
