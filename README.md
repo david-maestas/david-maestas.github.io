@@ -45,7 +45,6 @@ The two FIRE software manuscripts are **in preparation**; public code availabili
 has not been verified, so no software repository or preprint links are presented.
 The Spring 2027 junior-instructor role is explicitly an upcoming appointment.
 
-The downloadable PDF is still the September 2026 version. Replacing it is pending
-a supported local transfer of the November source and verification of the two
-software-manuscript corrections. Keep the original attachment unchanged, and
-replace all eight download targets together after the corrected copy is inspected.
+The downloadable PDF is `assets/CV_David_Maestas_Nov_2026.pdf`. Its two FIRE
+research-output lines state that the manuscripts are in preparation; the original
+supplied CV was preserved. All eight download controls point to this website copy.
