@@ -3,6 +3,7 @@
 Static academic personal website built with plain HTML, CSS, and vanilla JavaScript.
 
 This package contains only the deployable website files:
+
 - index.html
 - research.html
 - publications.html
@@ -11,12 +12,11 @@ This package contains only the deployable website files:
 - privacy.html
 - style.css
 - script.js
-- analytics.js
 - sitemap.xml
 - robots.txt
 - assets/
 
-The site includes consent-aware GA4 analytics, a privacy page, canonical and social metadata, and sitemap/robots files for search readiness. Analytics behavior, owner controls, event definitions, and manual GA4 setup are documented in [ANALYTICS_SETUP.md](ANALYTICS_SETUP.md).
+The site includes canonical and social metadata, a sitemap, and robots directives. It uses no visitor analytics, tracking scripts, cookies, or browser storage. Publication search filters the existing page content locally without saving or sending queries. The privacy page distinguishes this site behavior from GitHub Pages hosting practices.
 
 The repository remains directly deployable through GitHub Pages without a build step.
 
@@ -27,8 +27,8 @@ The repository remains directly deployable through GitHub Pages without a build 
 - `publications.html`: peer-reviewed articles and separately labeled public preprints.
 - `cv.html`: concise web CV; keep dates and appointment status explicit.
 - `contact.html`: professional contact information and profile links.
-- `privacy.html` and `analytics.js`: existing optional analytics and privacy controls.
-- `style.css` and `script.js`: responsive presentation and accessible navigation.
+- `privacy.html`: brief explanation of site functionality, hosting, and external links.
+- `style.css` and `script.js`: responsive presentation, accessible navigation, and publication filtering.
 - `assets/`: headshot, research visual, favicon, and downloadable CV.
 
 Preview locally with `python -m http.server 8000 --bind 127.0.0.1`, then open
