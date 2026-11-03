@@ -147,13 +147,21 @@ main:focus { outline: none; }
 .research-feature figcaption { color: #c5d6d0; }
 .research-feature figcaption a { color: #e1eae6; }
 .research-feature figcaption a:hover { color: #ffffff; }
-.selected-paper { display: grid; grid-template-columns: 45px minmax(0,1fr) auto; column-gap: 28px; padding-block: 30px; border-top: 1px solid var(--line); }
-.selected-paper .paper-number { color: var(--warm); font-family: var(--display); font-size: 1rem; grid-column: 1; grid-row: 1/5; padding-top: 5px; }
-.selected-paper .tag-row { grid-column: 2; display: flex; gap: 12px; flex-wrap: wrap; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 10px; }
-.selected-paper h3 { grid-column: 2; font-family: var(--display); font-size: 1.5rem; font-weight: 400; line-height: 1.3; max-width: 45ch; margin-bottom: 12px; letter-spacing: -0.015em; }
-.selected-paper .pub-meta { grid-column: 2; font-size: 0.83rem; color: var(--muted); }
-.selected-paper .paper-advance { grid-column: 2; font-size: 0.9rem; color: var(--muted); margin-top: 12px; max-width: 72ch; }
-.selected-paper .button-row { grid-column: 3; grid-row: 1/5; align-self: center; }
+/* Complete scientific figures accompany their matching selected study. */
+.selected-paper { display: grid; grid-template-columns: 45px minmax(0,1fr) 340px; column-gap: 28px; align-items: start; padding-block: 34px; border-top: 1px solid var(--line); }
+.selected-paper > * { min-width: 0; }
+.selected-paper .paper-number { color: var(--warm); font-family: var(--display); font-size: 1rem; padding-top: 5px; }
+.selected-paper .tag-row { display: flex; gap: 12px; flex-wrap: wrap; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); margin-bottom: 10px; }
+.selected-paper h3 { font-family: var(--display); font-size: 1.5rem; font-weight: 400; line-height: 1.3; max-width: 45ch; margin-bottom: 12px; letter-spacing: -0.015em; }
+.selected-paper .pub-meta { font-size: 0.83rem; color: var(--muted); }
+.selected-paper .paper-advance { font-size: 0.9rem; color: var(--muted); margin-top: 12px; max-width: 72ch; }
+.selected-paper .button-row { margin-top: 15px; }
+.selected-paper-figure { width: 100%; align-self: center; }
+.selected-paper-figure picture { display: block; background: #fff; }
+.selected-paper-figure img { width: 100%; height: auto; object-fit: contain; }
+.selected-paper-figure figcaption { padding-top: 11px; font-size: 0.69rem; line-height: 1.6; }
+.selected-image-credit { display: block; color: var(--muted); }
+.selected-image-full { display: inline-flex; align-items: center; min-height: 32px; font-size: 0.73rem; }
 .selected-paper:last-child { border-bottom: 1px solid var(--line); }
 .news-layout { display: grid; grid-template-columns: minmax(0,1fr) 300px; gap: 0 64px; align-items: start; }
 .news-story { min-width: 0; }
@@ -347,7 +355,8 @@ main:focus { outline: none; }
   .program-content { gap: 45px; }
   .program-block h2 { max-width: 30ch; }
   .publication-year-group { grid-template-columns: 70px minmax(0,1fr); gap: 22px; }
-  .selected-paper { grid-template-columns: 28px minmax(0,1fr) auto; gap: 10px 20px; }
+  .selected-paper { grid-template-columns: 28px minmax(0,1fr); gap: 18px 20px; }
+  .selected-paper-figure { grid-column: 2; max-width: 380px; align-self: start; }
   .selected-paper h3 { font-size: 1.3rem; }
   .footer-inner { align-items: start; }
   .footer-links { max-width: 300px; justify-content: end; }
@@ -410,7 +419,8 @@ main:focus { outline: none; }
   .selected-paper h3 { font-size: 1.3rem; }
   .selected-paper .pub-meta { font-size: 0.75rem; }
   .selected-paper .paper-advance { font-size: 0.85rem; }
-  .selected-paper .button-row { grid-column: 2; grid-row: auto; margin-top: 7px; }
+  .selected-paper .button-row { margin-top: 7px; }
+  .selected-paper-figure figcaption { font-size: 0.68rem; }
   .news-highlight { grid-template-columns: 1fr; gap: 14px; padding-block: 24px; }
   .news-meta { font-size: 0.7rem; padding-top: 0; }
   .news-meta time { display: inline; margin: 0; }

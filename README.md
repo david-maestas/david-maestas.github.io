@@ -33,6 +33,7 @@ The repository remains directly deployable through GitHub Pages without a build 
 - `style.css` and `script.js`: responsive presentation, accessible navigation, and publication filtering.
 - `assets/`: headshot, research visuals, favicon, and downloadable CV.
 - `assets/mtbio/`: author-provided Materials Today Bio microscopy panels with lossless WebP copies and PNG originals. Preserve complete panels, channel labels and scale bars; see the included attribution notes.
+- `assets/selected-publications/`: complete author-supplied study images for the homepage, with exact lossless WebP copies, PNG originals, and source notes.
 
 Preview locally with `python -m http.server 8000 --bind 127.0.0.1`, then open
 `http://127.0.0.1:8000/`. No dependencies or build tools are required.
