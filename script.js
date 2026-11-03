@@ -48,12 +48,18 @@ if (publicationSearch && publicationResults && clearPublicationSearch) {
   const yearGroups = [...document.querySelectorAll("[data-year-group]")];
   const peerReviewedHeading = document.querySelector("#peer-reviewed .section-heading");
   const preprintSection = document.querySelector("#preprints");
+  const normalizePublicationText = (value) => value.normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase();
   const searchable = publications.map((element) => ({
     element,
-    text: element.textContent.toLocaleLowerCase()
+    text: normalizePublicationText([
+      element.textContent,
+      element.dataset.authorSearch || "",
+      element.closest("[data-year-group]")?.dataset.yearGroup || ""
+    ].join(" "))
   }));
   const filterPublications = () => {
-    const query = publicationSearch.value.trim().toLocaleLowerCase();
+    const query = normalizePublicationText(publicationSearch.value.trim());
     const words = query.split(/\s+/).filter(Boolean);
     let shown = 0;
     searchable.forEach(({ element, text }) => {

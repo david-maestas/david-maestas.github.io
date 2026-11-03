@@ -15,6 +15,7 @@ This package contains only the deployable website files:
 - sitemap.xml
 - robots.txt
 - assets/
+- data/
 
 The site includes canonical and social metadata, a sitemap, and robots directives. It uses no visitor analytics, tracking scripts, cookies, or browser storage. Publication search filters the existing page content locally without saving or sending queries. The privacy page distinguishes this site behavior from GitHub Pages hosting practices.
 
@@ -25,6 +26,7 @@ The repository remains directly deployable through GitHub Pages without a build 
 - `index.html`: professional overview, selected research, profile links, and news.
 - `research.html`: funded work, research direction, and software descriptions.
 - `publications.html`: peer-reviewed articles and separately labeled public preprints.
+- `data/publication-authors.json`: verified ordered author lists and their article XML or publisher-deposited Crossref sources. Keep the HTML author lists and this provenance record in sync when updating citations. Published spelling is retained; David's canonical name is an additional search alias.
 - `cv.html`: concise web CV; keep dates and appointment status explicit.
 - `contact.html`: professional contact information and profile links.
 - `privacy.html`: brief explanation of site functionality, hosting, and external links.
@@ -44,7 +46,13 @@ dates when page content changes. Commit locally before a separately authorized p
 The web pages reflect the November 2026 CV and list 23 peer-reviewed articles.
 The two FIRE software manuscripts are **in preparation**; public code availability
 has not been verified, so no software repository or preprint links are presented.
+The software cards link to contact information for availability inquiries.
 The Spring 2027 junior-instructor role is explicitly an upcoming appointment.
+
+Long author lists preserve publication order, show David's name in bold, and
+expand through native keyboard-accessible details. Search includes the complete
+author lists, David's canonical name, and publication years; accents are optional.
+The author metadata file is a maintenance record, not a client-side request.
 
 The downloadable PDF is `assets/CV_David_Maestas_Nov_2026.pdf`. Its two FIRE
 research-output lines state that the manuscripts are in preparation; the original
